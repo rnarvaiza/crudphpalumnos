@@ -26,14 +26,15 @@ if (isset($_POST['submit'])) {
     $alumno = [
       "id"        => $_GET['id'],
       "nombre"    => $_POST['nombre'],
-      "apellido"  => $_POST['apellido'],
+      "apellidos"  => $_POST['apellidos'],
       "email"     => $_POST['email'],
-      "edad"      => $_POST['edad']
+      "edad"      => $_POST['edad'],
+      "fecha_nacimiento" => $_POST['fecha_nacimiento']
     ];
     
     $consultaSQL = "UPDATE alumnos SET
         nombre = :nombre,
-        apellido = :apellido,
+        apellidos = :apellidos,
         email = :email,
         edad = :edad,
         fecha_nacimiento = :fecha_nacimiento
