@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
       "nombre"    => $_POST['nombre'],
       "apellidos"  => $_POST['apellidos'],
       "email"     => $_POST['email'],
-      "edad"      => $_POST['edad'],
+      "telefono"      => $_POST['telefono'],
       "fecha_nacimiento" => $_POST['fecha_nacimiento']
     ];
     
@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
         nombre = :nombre,
         apellidos = :apellidos,
         email = :email,
-        edad = :edad,
+        telefono = :telefono,
         fecha_nacimiento = :fecha_nacimiento
         WHERE id = :id";
     $consulta = $conexion->prepare($consultaSQL);
@@ -127,9 +127,13 @@ if (isset($alumno) && $alumno) {
             <input type="email" name="email" id="email" value="<?= escapar($alumno['email']) ?>" class="form-control">
           </div>
           <div class="form-group">
-            <label for="edad">Edad</label>
-            <input type="text" name="edad" id="edad" value="<?= escapar($alumno['edad']) ?>" class="form-control">
+            <label for="telefono">telefono</label>
+            <input type="text" name="telefono" id="telefono" value="<?= escapar($alumno['telefono']) ?>" class="form-control">
           </div>
+            <div class="form-group">
+                <label for="fecha_nacimiento">fecha de nacimiento</label>
+                <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" value="<?= escapar($alumno['fecha_nacimiento']) ?>" class="form-control">
+            </div>
           <div class="form-group">
             <input name="csrf" type="hidden" value="<?php echo escapar($_SESSION['csrf']); ?>">
             <input type="submit" name="submit" class="btn btn-primary" value="Actualizar">

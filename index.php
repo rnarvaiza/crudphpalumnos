@@ -89,9 +89,10 @@ if ($error) {
               <tr>
                 <td><?php echo escapar($fila["id"]); ?></td>
                 <td><?php echo escapar($fila["nombre"]); ?></td>
-                <td><?php echo escapar($fila["apellido"]); ?></td>
+                <td><?php echo escapar($fila["apellidos"]); ?></td>
                 <td><?php echo escapar($fila["email"]); ?></td>
-                <td><?php echo escapar($fila["edad"]); ?></td>
+                <td><?php echo escapar($fila["telefono"]); ?></td>
+                <td><?php echo escapar($fila["fecha_nacimiento"]); ?></td>
                 <td>
                   <a href="<?= 'borrar.php?id=' . escapar($fila["id"]) ?>">🗑️Borrar</a>
                   <a href="<?= 'editar.php?id=' . escapar($fila["id"]) ?>">✏️Editar</a>
