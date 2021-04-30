@@ -21,13 +21,13 @@ if (isset($_POST['submit'])) {
 
     $alumno = [
       "nombre"   => $_POST['nombre'],
-      "apellido" => $_POST['apellido'],
+      "apellidos" => $_POST['apellidos'],
       "email"    => $_POST['email'],
       "telefono" => $_POST['telefono'],
       "fecha_nacimiento" => $_POST['fecha_nacimiento'],
     ];
 
-    $consultaSQL = "INSERT INTO alumnos (nombre, apellido, email, telefono, fecha_nacimiento)";
+    $consultaSQL = "INSERT INTO alumnos (nombre, apellidos, email, telefono, fecha_nacimiento)";
     $consultaSQL .= "values (:" . implode(", :", array_keys($alumno)) . ")";
 
     $sentencia = $conexion->prepare($consultaSQL);
@@ -69,8 +69,8 @@ if (isset($resultado)) {
           <input type="text" name="nombre" id="nombre" class="form-control">
         </div>
         <div class="form-group">
-          <label for="apellido">Apellido</label>
-          <input type="text" name="apellido" id="apellido" class="form-control">
+          <label for="apellidos">Apellidos</label>
+          <input type="text" name="apellidos" id="apellidos" class="form-control">
         </div>
         <div class="form-group">
           <label for="email">Email</label>
