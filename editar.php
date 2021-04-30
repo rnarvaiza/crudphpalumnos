@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
         apellido = :apellido,
         email = :email,
         edad = :edad,
-        updated_at = NOW()
+        fecha_nacimiento = :fecha_nacimiento
         WHERE id = :id";
     $consulta = $conexion->prepare($consultaSQL);
     $consulta->execute($alumno);
