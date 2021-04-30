@@ -111,7 +111,7 @@ if (isset($alumno) && $alumno) {
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2 class="mt-4">Editando el alumno <?= escapar($alumno['nombre']) . ' ' . escapar($alumno['apellido'])  ?></h2>
+        <h2 class="mt-4">Editando el alumno <?= escapar($alumno['nombre']) . ' ' . escapar($alumno['apellidos'])  ?></h2>
         <hr>
         <form method="post">
           <div class="form-group">
@@ -119,8 +119,8 @@ if (isset($alumno) && $alumno) {
             <input type="text" name="nombre" id="nombre" value="<?= escapar($alumno['nombre']) ?>" class="form-control">
           </div>
           <div class="form-group">
-            <label for="apellido">Apellido</label>
-            <input type="text" name="apellido" id="apellido" value="<?= escapar($alumno['apellido']) ?>" class="form-control">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" name="apellidos" id="apellidos" value="<?= escapar($alumno['apellidos']) ?>" class="form-control">
           </div>
           <div class="form-group">
             <label for="email">Email</label>
