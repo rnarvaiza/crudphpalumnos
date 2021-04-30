@@ -13,7 +13,7 @@ try {
   $conexion = new PDO($dsn, $config['db']['user'], $config['db']['pass'], $config['db']['options']);
     
   $id = $_GET['alumnoId'];
-  $consultaSQL = "DELETE FROM alumnos WHERE alumnoId =" . $id;
+  $consultaSQL = "DELETE FROM alumnos WHERE id =" . $id;
 
   $sentencia = $conexion->prepare($consultaSQL);
   $sentencia->execute();
