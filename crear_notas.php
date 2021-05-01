@@ -23,12 +23,11 @@ if (isset($_POST['submit'])) {
             "asignatura"   => $_POST['asignatura'],
             "nota" => $_POST['nota'],
             "observaciones"    => $_POST['observaciones'],
-            "telefono" => $_POST['telefono'],
             "alumnoid" => $_GET['alumnoid'],
         ];
 
         $consultaSQL = "INSERT INTO notas (asignatura, nota, observaciones, alumnoid)";
-        $consultaSQL .= "values (:" . implode(", :", array_keys(nota)) . ")";
+        $consultaSQL .= "values (:" . implode(", :", array_keys($nota)) . ")";
 
         $sentencia = $conexion->prepare($consultaSQL);
         $sentencia->execute($nota);
