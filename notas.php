@@ -84,7 +84,6 @@ if ($error) {
                     <tr>
                         <th>#id nota</th>
                         <th>#id alumno</th>
-                        <th>Nombre alumno</th>
                         <th>asignatura</th>
                         <th>nota</th>
                         <th>observaciones</th>
@@ -99,12 +98,11 @@ if ($error) {
                             <tr>
                                 <td><?php echo escapar($fila["id"]); ?></td>
                                 <td><?php echo escapar($fila["alumnoid"]); ?></td>
-                                <td><?php echo escapar($fila["nombre"]); ?></td>
                                 <td><?php echo escapar($fila["asignatura"]); ?></td>
                                 <td><?php echo escapar($fila["nota"]); ?></td>
                                 <td><?php echo escapar($fila["observaciones"]); ?></td>
                                 <td>
-                                    <a href="<?= 'borrar_nota.php?id=' . escapar($fila["id"]) ?>">🗑️Borrar</a>
+                                    <a href="<?= 'eliminar_nota.php?id=' . escapar($fila["id"]) ?>">🗑️Borrar</a>
                                     <a href="<?= 'editar_nota.php?id=' . escapar($fila["id"]) ?>">✏️Editar</a>
                                 </td>
                             </tr>
