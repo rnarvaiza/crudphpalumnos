@@ -78,12 +78,13 @@ if ($error) {
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="mt-3">Lista de notas de: <?= escapar($_GET['nombre']) ?></h2>
+                <h2 class="mt-3">Lista de notas</h2>
                 <table class="table">
                     <thead>
                     <tr>
                         <th>#id nota</th>
                         <th>#id alumno</th>
+                        <th>Nombre alumno</th>
                         <th>asignatura</th>
                         <th>nota</th>
                         <th>observaciones</th>
@@ -98,6 +99,7 @@ if ($error) {
                             <tr>
                                 <td><?php echo escapar($fila["id"]); ?></td>
                                 <td><?php echo escapar($fila["alumnoid"]); ?></td>
+                                <td><?php echo escapar($fila["nombre"]); ?></td>
                                 <td><?php echo escapar($fila["asignatura"]); ?></td>
                                 <td><?php echo escapar($fila["nota"]); ?></td>
                                 <td><?php echo escapar($fila["observaciones"]); ?></td>
