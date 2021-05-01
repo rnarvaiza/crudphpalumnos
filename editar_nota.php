@@ -28,7 +28,6 @@ if (isset($_POST['submit'])) {
             "asignatura"   => $_POST['asignatura'],
             "nota" => $_POST['nota'],
             "observaciones"    => $_POST['observaciones'],
-            "alumnoid" => $_POST['alumnoid'],
         ];
 
         $consultaSQL = "UPDATE notas SET
