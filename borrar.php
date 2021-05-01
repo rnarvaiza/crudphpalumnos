@@ -18,11 +18,6 @@ try {
   $sentencia = $conexion->prepare($consultaSQL);
   $sentencia->execute();
 
-  $consultaSQL = "DELETE FROM alumnos WHERE id =" . $id;
-
-  $sentencia = $conexion->prepare($consultaSQL);
-  $sentencia->execute();
-
   header('Location: index.php');
 
 } catch(PDOException $error) {
