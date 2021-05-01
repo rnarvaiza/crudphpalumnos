@@ -19,6 +19,15 @@ if (isset($_POST['submit'])) {
         $dsn = 'mysql:host=' . $config['db']['host'] . ';dbname=' . $config['db']['name'];
         $conexion = new PDO($dsn, $config['db']['user'], $config['db']['pass'], $config['db']['options']);
 
+        $alumno = [
+            "id" => $_GET['id'],
+            "nombre" => $_POST['nombre'],
+            "apellidos" => $_POST['apellidos'],
+            "email" => $_POST['email'],
+            "telefono" => $_POST['telefono'],
+            "fecha_nacimiento" => $_POST['fecha_nacimiento'],
+        ];
+
         $nota = [
             "asignatura"   => $_POST['asignatura'],
             "nota" => $_POST['nota'],
@@ -60,12 +69,12 @@ if (isset($resultado)) {
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="mt-4">Crea una nota</h2>
+                <h2 class="mt-4">Nueva nota para #<?= escapar($alumno['nombre']) . ' ' . escapar($alumno['nombre'])?></h2>
                 <hr>
                 <form method="post">
                     <div class="form-group">
                         <label for="alumnoid">Id alumno</label>
-                        <input type="text" name="alumnoid" id="alumnoid" value="<?= $_GET['alumnoid']?>" class="form-control">
+                        <input type="text" name="alumnoid" id="alumnoid" value="<?= escapar($_GET['alumnoid'])?>" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="asignatura">Asignatura</label>
