@@ -78,7 +78,7 @@ if ($error) {
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="mt-3"><?= $titulo ?> de <?= escapar($alumno['nombre']) . ' ' .escapar($alumno['apellidos']) ?></h2>
+                <h2 class="mt-3">Lista de notas de: <?= escapar($_GET['nombre']) ?></h2>
                 <table class="table">
                     <thead>
                     <tr>

@@ -69,7 +69,7 @@ if (isset($resultado)) {
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="mt-4">Nueva nota para #<?= escapar($_GET['id']) . ' ' . escapar($_GET['id']) ?></h2>
+                <h2 class="mt-4">Nueva nota para <?= escapar($_GET['nombre']) ?></h2>
                 <hr>
                 <form method="post">
                     <div class="form-group">
