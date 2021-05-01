@@ -31,9 +31,9 @@ if (isset($_POST['submit'])) {
         ];
 
         $consultaSQL = "UPDATE notas SET
-                 asignatura = :asignatura,
-                 nota = :nota,
-                 observaciones =:observaciones,
+        asignatura = :asignatura,
+        nota = :nota,
+        observaciones = :observaciones
         WHERE id = :id";
         $consulta = $conexion->prepare($consultaSQL);
         $consulta->execute($nota);
