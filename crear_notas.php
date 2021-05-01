@@ -69,12 +69,12 @@ if (isset($resultado)) {
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="mt-4">Nueva nota para #<?= escapar($alumno['nombre']) . ' ' . escapar($alumno['nombre']) ?></h2>
+                <h2 class="mt-4">Nueva nota para #<?= escapar($_GET['id']) . ' ' . escapar($_GET['id']) ?></h2>
                 <hr>
                 <form method="post">
                     <div class="form-group">
                         <label for="alumnoid">Id alumno</label>
-                        <input type="text" name="alumnoid" id="alumnoid" value="<?= escapar($_GET['alumnoid']) ?>" class="form-control">
+                        <input type="text" name="alumnoid" id="alumnoid" value="<?= escapar($_GET['id']) ?>" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="asignatura">Asignatura</label>
