@@ -98,6 +98,9 @@ if ($error) {
                   <a href="<?= 'borrar.php?id=' . escapar($fila["id"]) ?>">🗑️Borrar</a>
                   <a href="<?= 'editar.php?id=' . escapar($fila["id"]) ?>">✏️Editar</a>
                 </td>
+                <td>
+                    <a href="<?= 'notas.php?id=' . escapar($fila["id"]) ?>">✏Notas</a>
+                </td>
               </tr>
               <?php
             }
