@@ -28,7 +28,7 @@ try {
     $error= $error->getMessage();
 }
 
-$titulo = isset($_POST['asignatura']) ? 'Lista de asignatura (' . $_POST['asignatura'] . ')' : 'Lista de asignatura';
+$titulo = isset($_POST['asignatura']) ? 'Lista de notas (' . $_POST['asignatura'] . ')' : 'Lista de notas';
 ?>
 
 <?php include "templates/header.php"; ?>
