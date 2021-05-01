@@ -25,7 +25,7 @@ try {
     if (isset($_POST['apellido'])) {
         $consultaSQL = "SELECT * FROM notas WHERE notas.alumnoid LIKE '%" . $_GET['id'] . "%'";
     } else {
-        $consultaSQL = "SELECT * FROM notas";
+        $consultaSQL = "SELECT * FROM notas WHERE notas.alumnoid LIKE '%" . $_GET['id'] . "%'";
     }
 
     $sentencia = $conexion->prepare($consultaSQL);
@@ -37,7 +37,7 @@ try {
     $error= $error->getMessage();
 }
 
-$titulo = isset($_POST['id']) ? 'Lista de notas de (' . $_GET['nombre'] . ') (' . $_GET['apellidos'] . ')'  : 'Lista de notas de ' . $_GET['nombre']; ' '. $_GET['apellidos'];
+$titulo = isset($_POST['id']) ? 'Lista de notas de (' . $_GET['nombre'] . ')'  : 'Lista de notas de ' . $_GET['nombre'];
 ?>
 
 <?php include "templates/header.php"; ?>
@@ -78,7 +78,7 @@ if ($error) {
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="mt-3"><?= $titulo ?> </h2>
+                <h2 class="mt-3"><?= $titulo ?> de <?= escapar($alumno['nombre']) . ' ' .escapar($alumno['apellidos']) ?></h2>
                 <table class="table">
                     <thead>
                     <tr>
@@ -87,6 +87,7 @@ if ($error) {
                         <th>asignatura</th>
                         <th>nota</th>
                         <th>observaciones</th>
+                        <th>acciones</th>
                     </tr>
                     </thead>
                     <tbody>
