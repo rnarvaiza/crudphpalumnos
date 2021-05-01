@@ -66,7 +66,7 @@ if (isset($resultado)) {
                 <form method="post">
                     <div class="form-group">
                         <label for="alumnoid">Id alumno</label>
-                        <input type="text" name="alumnoid" id="alumnoid" value="<?= escapar($_GET['alumnoid'])?>" class="form-control">
+                        <input type="text" name="alumnoid" id="alumnoid" value="<?= $_GET['alumnoid']?>" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="asignatura">Asignatura</label>
